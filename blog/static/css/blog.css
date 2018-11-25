@@ -51,8 +51,18 @@ h1, h2, h3, h4 {
     color: #de89a6;
 }
 
-.save .btn .btn-default {
+.btn-default {
+    text-shadow: none;
+    border: 1px solid #cb6085;
     background-image: none;
+    background-color: #fff;
+    color: #cb6085;
+}
+
+.btn-default:hover {
+    background-color: #cb6085;
+    color: #fff;
+    border: 1px solid #cb6085;
 }
 
 .post-form textarea, .post-form input {
