@@ -13,6 +13,11 @@
     </head>
     <body>
         <div class="page-header">
+            {% if user.is_authenticated %}
+                <div class="new-post-button">
+                    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> New post</a>
+                </div>
+            {% endif %}
             <div class="logo">
                 <a href="{% url 'post_list' %}"><img src="../../static/img/logo.png"/></a>
             </div>
