@@ -14,9 +14,10 @@
     <body>
         <div class="page-header">
             {% if user.is_authenticated %}
-                <div class="new-post-button">
+                    <p class="">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
                     <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> New post</a>
-                </div>
+            {% else %}
+                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span> Login</a>
             {% endif %}
             <div class="logo">
                 <a href="{% url 'post_list' %}"><img src="/static/img/logo.png"/></a>
