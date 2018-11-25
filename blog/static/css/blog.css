@@ -81,7 +81,17 @@ h1, h2, h3, h4 {
 	padding-bottom: 14px;
 }
 
-.post h1 a, .post h1 a:visited {
+.post h1, .post h1 a, .post h1 a:visited {
     color: #000000;
     font-size: 18pt;
+}
+
+.post h1 a, .post h1 a:visited {
+    text-decoration: underline;
+    text-decoration-color: #cb6085;
+    text-decoration-style: dashed;
+}
+
+.post h1 a:hover{
+	color: #cb6085;
 }

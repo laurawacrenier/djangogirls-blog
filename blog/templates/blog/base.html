@@ -1,0 +1,35 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css"> 
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet" type="text/css">
+
+
+        <title>Djangogirls blog</title>
+    </head>
+    <body>
+        <div class="page-header">
+            <div class="logo">
+                <a href="{% url 'post_list' %}"><img src="../../static/img/logo.png"/></a>
+            </div>
+            <h1><a href="{% url 'post_list' %}">Djangogirls Blog</a></h1>
+        </div>
+
+        <div class="hero-image">
+        </div>
+
+        <div>
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-3 posts-list">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
